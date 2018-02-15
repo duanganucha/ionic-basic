@@ -1,11 +1,9 @@
-import { ShopPage } from './../shop/shop';
 import { Buyout } from './../buyout/buyout';
-import { UsersPage } from './../users/users';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the HomePage page.
+ * Generated class for the ShopPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,28 +11,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
+  selector: 'page-shop',
+  templateUrl: 'shop.html',
 })
-export class HomePage {
-
+export class ShopPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-
-
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+    console.log('ionViewDidLoad ShopPage');
   }
-
-  goToUser(){
-    console.log('gotouser')
-      this.navCtrl.push(UsersPage);
+  goBuyout(productData:{name:string,quantity:number}){
+    this.navCtrl.push(Buyout,productData);
   }
-
-  goToShop(){
-      this.navCtrl.push(ShopPage);
-  }
-
 }

@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Buyout
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h2>Buy</h2>
+    <p> Name : {{productData.name}}</p>
+    <p> Quantity : {{productData.quantity}}</p>
+    <br>
+    <hr>
+    <button ion-button (click)="onBuy()">Buy</button>
+    <button ion-button navPop>Back</button>
+
+</ion-content>
